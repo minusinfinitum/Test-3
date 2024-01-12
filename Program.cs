@@ -43,3 +43,29 @@ class Program
         Console.WriteLine(result);
     }
 }
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Hafta kunini kiriting (jum = juma, shan = shanba, yak = yakshanba, dush = dushanba, sesh = seshanba, chor = chorshanba, pay = payshanba): ");
+        string haftaKuni = Console.ReadLine().ToLower();
+
+        string dayInEnglish = haftaKuni switch
+        {
+            "yak" => "Sunday",
+            "dush" => "Monday",
+            "sesh" => "Tuesday",
+            "chor" => "Wednesday",
+            "pay" => "Thursday",
+            "jum" => "Friday",
+            "shan" => "Saturday",
+            _ => "Invalid input"
+        };
+
+        Console.WriteLine($"Ingliz tilida: {dayInEnglish}");
+    }
+}
